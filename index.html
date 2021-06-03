@@ -1,0 +1,138 @@
+<?php
+$api_url = "https://www.themealdb.com/api/json/v1/1/categories.php";
+$json_list = @file_get_contents($api_url);
+$array = json_decode($json_list, true);
+$array = $array["categories"];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>samsararecipe</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/samsararecipe.png"
+            alt="logomealbd"
+            width="160px"
+            href="index.html"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link mr-12px active" href="index.html"
+              >Home</a
+            >
+            <a class="nav-item nav-link active" href="search.php">Search</a>
+            <a class="nav-item nav-link active" href="listcategory.php"
+              >Category</a
+            >
+            <a class="nav-item nav-link active" href="listmeals.php">Meals</a>
+            <a class="nav-item nav-link active" href="area.php">Area</a>
+            <a class="nav-item nav-link active" href="ingredients.php">Ingredients</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+  
+          <h1 class="text-center mt-5" style="color: rgb(218, 25, 25);">SAMSARARECIPE</h1>
+          <h5 class="text-center" style="color: rgb(243, 207, 4);">Good Taste, Good Food, Good Mood.</h5>
+
+
+          <div class="row mt-5">
+                <div class="col-md-3 mt-5">
+                    <div class="card text-white mb-3" style="background-color: rgb(218, 25, 25);">
+                        <div class="card-header"><a href="listcategory.php" style="text-decoration: none; color:white;">Categories</a></div>
+                        <div class="card-body">
+                          <h5 class="card-title">14 Categories</h5>
+                          <p class="card-text">This website will display 14 categories of meals. Info will be presented regarding the description and description of each category.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <div class="card text-dark mb-3" style="background-color: rgb(243, 207, 4);">
+                        <div class="card-header"><a href="area.php" style="text-decoration: none; " class="text-dark">Area</a></div>
+                        <div class="card-body">
+                          <h5 class="card-title">26 Area</h5>
+                          <p class="card-text">26 areas will be displayed on this website. Each meals will be grouped by area. So you can know what area these meals are from.
+                        </p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <div class="card text-white mb-3" style="background-color: rgb(218, 25, 25);">
+                        <div class="card-header"><a href="search.php" style="text-decoration: none; color:white;">Ingredients</a></div>
+                        <div class="card-body">
+                          <h5 class="card-title">606 Ingredients</h5>
+                          <p class="card-text">This website will display 606 ingredients. You will describe each ingredient in a description. The description for each ingredient.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3 mt-5">
+                    <div class="card text-dark mb-3" style="background-color: rgb(243, 207, 4);">
+                        <div class="card-header"><a href="area.php" style="text-decoration: none; " class="text-dark">Search</a></div>
+                        <div class="card-body">
+                          <h5 class="card-title">Search Meal</h5>
+                          <p class="card-text">On this website, to see more detailed meals, you can use the search menu. The details you are looking for will be displayed with details 
+                        </p>
+                        </div>
+                      </div>
+                </div>
+          </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
